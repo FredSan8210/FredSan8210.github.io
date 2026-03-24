@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeOrbit Ingeniería SAS</title>
+<style>
+body{margin:0;font-family:Arial, sans-serif;background:#f4f6f9;color:#333}
+header{background:#0b3d6d;color:#fff;padding:20px;text-align:center}
+header h1{margin:0;font-size:2.5em}
+header p{margin:5px 0 0}
+section{padding:40px 20px;max-width:1100px;margin:auto}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.card h3{color:#0b3d6d}
+footer{background:#0b3d6d;color:#fff;text-align:center;padding:20px}
+.contact{background:#e9f1fb;border-radius:10px;padding:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>GeOrbit Ingeniería SAS</h1>
+<p>Topografía y Geodesia Integral</p>
+</header>
+
+<section>
+<h2>Servicios</h2>
+<div class="services">
+
+<div class="card">
+<h3>Levantamientos Topográficos</h3>
+<img src="images/topografia.jpg" alt="Topografía" style="width:100%;border-radius:8px;margin-bottom:10px">
+<ul>
+<li>Medición de terrenos y predios al detalle</li>
+<li>Georreferenciación GNSS y estación total</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Cartografía Temática</h3>
+<img src="images/cartografia.jpg" alt="Cartografía" style="width:100%;border-radius:8px;margin-bottom:10px">
+<ul>
+<li>Mapas topográficos</li>
+<li>Bases cartográficas</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Fotogrametría UAV</h3>
+<img src="images/dron.jpg" alt="Dron" style="width:100%;border-radius:8px;margin-bottom:10px">
+<ul>
+<li>Levantamientos topográficos con dron</li>
+<li>Generación de MDT y MDE</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Proyectos</h2>
+<div class="services">
+
+<div class="card">
+<img src="images/proyecto1.jpg" alt="Proyecto 1" style="width:100%;border-radius:8px;margin-bottom:10px">
+<h3>Levantamiento Topográfico</h3>
+<p>Levantamiento detallado para obra civil utilizando estación total y GNSS.</p>
+</div>
+
+<div class="card">
+<img src="images/proyecto2.jpg" alt="Proyecto 2" style="width:100%;border-radius:8px;margin-bottom:10px">
+<h3>Cartografía</h3>
+<p>Elaboración de mapas topográficos para planificación y diseño.</p>
+</div>
+
+<div class="card">
+<img src="images/proyecto3.jpg" alt="Proyecto 3" style="width:100%;border-radius:8px;margin-bottom:10px">
+<h3>Fotogrametría UAV</h3>
+<p>Captura aérea con dron y generación de modelos digitales del terreno.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact">
+<h2>Contáctanos</h2>
+<form action="#" method="post" onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente'); this.reset();" style="max-width:500px;margin:auto">
+  <label>Nombre:</label><br>
+  <input type="text" name="nombre" required style="width:100%;padding:8px;margin:3px 0 10px;border-radius:5px;border:1px solid #ccc"><br>
+
+  <label>Email:</label><br>
+  <input type="email" name="email" required style="width:100%;padding:8px;margin:3px 0 10px;border-radius:5px;border:1px solid #ccc"><br>
+
+  <label>Teléfono:</label><br>
+  <input type="tel" name="telefono" style="width:100%;padding:8px;margin:3px 0 10px;border-radius:5px;border:1px solid #ccc"><br>
+
+  <label>Mensaje:</label><br>
+  <textarea name="mensaje" rows="2" required style="width:100%;padding:8px;margin:3px 0 10px;border-radius:5px;border:1px solid #ccc"></textarea><br>
+
+  <button type="submit" style="background:#0b3d6d;color:#fff;padding:10px 16px;border:none;border-radius:5px;cursor:pointer">Enviar</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 GeOrbit Ingeniería SAS</p>
+</footer>
+
+<style>
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+.whatsapp-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  animation:bounce 2s infinite;
+}
+.whatsapp-btn img{
+  width:35px;
+  height:35px;
+}
+</style>
+
+<a href="https://wa.me/573124566981" target="_blank" class="whatsapp-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+</body>
+</html>
