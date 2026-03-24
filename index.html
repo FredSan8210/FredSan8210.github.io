@@ -84,7 +84,8 @@ footer{background:#0b3d6d;color:#fff;text-align:center;padding:20px}
 
 <section class="contact">
 <h2>Contáctanos</h2>
-<form action="#" method="post" onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente'); this.reset();" style="max-width:500px;margin:auto">
+<form id="contactForm" style="max-width:500px;margin:auto">
+
   <label>Nombre:</label><br>
   <input type="text" name="nombre" required style="width:100%;padding:8px;margin:3px 0 10px;border-radius:5px;border:1px solid #ccc"><br>
 
@@ -131,8 +132,29 @@ footer{background:#0b3d6d;color:#fff;text-align:center;padding:20px}
 }
 </style>
 
-<a href="https://wa.me/573124569681" target="_blank" class="whatsapp-btn">
+<a href="https://wa.me/573124566981" target="_blank" class="whatsapp-btn">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){ emailjs.init("b_do_nnYut-IXJbNL"); })();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.send("service_ggnndco","template_owckpjv",{
+    from_name: this.nombre.value,
+    from_email: this.email.value,
+    phone: this.telefono.value,
+    message: this.mensaje.value
+  }).then(function(){
+    alert("Mensaje enviado correctamente");
+  }, function(error){
+    alert("Error al enviar el mensaje");
+  });
+
+  this.reset();
+});
+</script>
 </body>
 </html>
